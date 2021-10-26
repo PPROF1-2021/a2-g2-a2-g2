@@ -233,5 +233,9 @@ header {
     margin: 20px 0;
 }
 
-
-/**** Barra USUARIO ****/
+.login form select {
+    margin: 12px auto;
+    width: 290px;
+    height: 25px;
+    display: block;
+}
