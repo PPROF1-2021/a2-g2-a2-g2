@@ -155,3 +155,7 @@ nav.navbar {
     max-width: 42px;
     margin: 0 15px 10px 0;
 }
+
+.contenedor iframe {
+    width: 100%;
+}
