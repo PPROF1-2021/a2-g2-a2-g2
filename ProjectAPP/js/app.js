@@ -4,6 +4,6 @@ $(document).ready(function() {
     //elimina las notificaciones
     $('.btn-close').click(function(e) {
         var id = e.target.id;
-        $("#" + id).parent().parent().removeClass('show');
+        $("#" + id).parent().parent().hide();
     });
 });
