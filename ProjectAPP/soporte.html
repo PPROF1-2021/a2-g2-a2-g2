@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectAPP - Soporte</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+
+    <!--Estilos propios-->
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
@@ -20,7 +24,7 @@
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.jpg" alt="Logo ProjectAPP"></a>
                     <a href="index.html">
-                         ProjectAPP
+                        ProjectAPP
                     </a>
                 </div>
 
@@ -43,13 +47,13 @@
     </header>
     <main>
         <section class="login contenedor">
-            <form action="">
+            <form name = "contacto" method="post" action="" class="needs-validation" novalidate>
                 <h3 class="centrado">¡¡Comúnicate con nosotros!!</h3>
-                <p>Si tienes alguna duda o quieres contactar con nosotros dejanos tu comentarios y nos estaremos contactando contigo</p>
+                <p>Si tienes alguna duda o quieres contactar con nosotros dejanos tu comentarios y nos estaremos comunicando contigo</p>
                 <hr>
-                <input type="email" name="email" id="email" placeholder="Ingresá tu correo">
-                <input type="tel" name="tel" id="tel" placeholder="Ingresá tu teléfono">
-                <textarea name="comentario" id="comentarios" cols="30" rows="10"></textarea>
+                <input type="email" name="email" id="email"  placeholder="Ingresá tu correo"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+                <input type="tel" name="tel" id="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ingresá tu teléfono"required>
+                <textarea name="comentario" id="comentarios" required cols="30" rows="10"></textarea>
                 <a href="" class="btn">Enviar</a>
             </form>
 
