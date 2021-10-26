@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectAPP - </title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -22,7 +20,7 @@
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.jpg" alt="Logo ProjectAPP"></a>
                     <a href="index.html">
-                        ProjectAPP
+                         ProjectAPP
                     </a>
                 </div>
 
@@ -31,9 +29,11 @@
                         <li>
                             <a href="login.html">Iniciá Sesión</a>
                         </li>
-
                         <li>
-                            <a href="soporte.html"> Soporte</a>
+                            <a href="registrar.html">Registrarse</a>
+                        </li>
+                        <li>
+                            <a href="soporte.html">Soporte</a>
                         </li>
                     </ul>
                 </div>
@@ -48,17 +48,15 @@
             <form method="post" action="" name="signup-form">
                 <div class="form-element">
                     <label>Nombre y Apellido</label>
-                    <input type="text" name="nombre y apellido" pattern="[a-zA-Z0-9]+" required
-                        placeholder="Nombre y Apellido" />
+                    <input type="text" name="nombre y apellido" pattern="[a-zA-Z0-9]+" required placeholder="Nombre y Apellido" />
                 </div>
                 <div class="form-element">
                     <label>Fecha de Nacimiento</label>
-                    <input type="date" id="fecha de nacimiento" name="trip-start" value="2018-07-22"
-       min="1920-01-01" >
+                    <input type="date" id="fecha de nacimiento" name="trip-start" value="2018-07-22" min="1920-01-01">
                 </div>
-                    <div class="form-element">
-                        <label>Provincia </label>
-                        <select id="provincia" name="provincia">
+                <div class="form-element">
+                    <label>Provincia </label>
+                    <select id="provincia" name="provincia">
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="CABA">Ciudad Autonoma de Buenos Aires</option>
                             <option value="Catamarca">Catamarca</option>
@@ -84,10 +82,10 @@
                             <option value=" Tierra del Fuego"> Tierra del Fuego</option>
                             <option value="Tucumán"> Tucumán</option>
                         </select>
-                        </div>
-                            <div class="form-element">
-                                <label>Pais</label>
-                                <select id="country" name="country">
+                </div>
+                <div class="form-element">
+                    <label>Pais</label>
+                    <select id="country" name="country">
                                     <option value="Afganistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
                                     <option value="Algeria">Algeria</option>
@@ -335,22 +333,20 @@
                                     <option value="Zambia">Zambia</option>
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
-                            </div>
-                            <div class="form-element">
-                                <label>Nombre de Usuario</label>
-                                <input type="text" name="nombre de usuario" pattern="[a-zA-Z0-9]+" required
-                                    placeholder="Nombre de Usuario" />
-                            </div>
-                            <div class="form-element">
-                                <label>Email</label>
-                                <input type="email" name="email" required placeholder="Email" />
-                            </div>
-                            <div class="form-element">
-                                <label>Clave</label>
-                                <input type="password" name="password" required
-                                    placeholder="Ingresa clave de 8 digitos" />
-                            </div>
-                            <a href="dashboard.html" class="btn">Continuar</a>
+                </div>
+                <div class="form-element">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" name="nombre de usuario" pattern="[a-zA-Z0-9]+" required placeholder="Nombre de Usuario" />
+                </div>
+                <div class="form-element">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="Email" />
+                </div>
+                <div class="form-element">
+                    <label>Clave</label>
+                    <input type="password" name="password" required placeholder="Ingresa clave de 8 digitos" />
+                </div>
+                <a href="dashboard.html" class="btn">Continuar</a>
             </form>
             </form>
 
