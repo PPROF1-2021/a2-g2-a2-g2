@@ -5,7 +5,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    
 }
 
 
@@ -65,7 +64,6 @@ header {
     box-shadow: 0 2px 1px rgba(128, 128, 128, 0.357);
     margin-bottom: 10px;
     padding: 5px 0;
-        
 }
 
 .barra-navegador div {
@@ -215,4 +213,11 @@ header {
 
 .login hr {
     margin: 20px 0;
+}
+
+.login form select {
+    margin: 12px auto;
+    width: 290px;
+    height: 25px;
+    display: block;
 }
