@@ -7,7 +7,7 @@ html {
     height: -webkit-fill-available;
 }
 
-.sidebar {
+.contenido {
     display: flex;
     flex-wrap: nowrap;
     min-height: 100vh;

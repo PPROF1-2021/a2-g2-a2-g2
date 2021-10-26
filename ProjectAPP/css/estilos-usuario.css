@@ -85,6 +85,12 @@ nav.navbar {
     margin-bottom: 5px;
 }
 
+@media (max-width: 991px) {
+    .sidebar {
+        display: none !important;
+    }
+}
+
 
 /*contenido*/
 
