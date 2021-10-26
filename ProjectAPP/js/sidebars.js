@@ -1,0 +1,1 @@
+/* global bootstrap: false */

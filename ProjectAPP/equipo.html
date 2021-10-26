@@ -6,37 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo</title>
+    <!--Estilos de tercero-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sidebars.css">
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/estilos-usuario.css">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
-        <nav class="barra-navegador">
-            <div class="contenedor">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.jpg" alt="Logo ProjectAPP"></a>
-                    <a href="index.html">
-                         ProjectAPP
+    <div class="contenido">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar" style="width: 280px;">
+            <a href="dashboard.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <img class="logo" src="img/logo.jpg" alt="">
+                <span class="fs-4">ProjectApp</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto text-white">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active" aria-current="page">
+                        <i class="fas fa-home"></i> Inicio
                     </a>
-                </div>
-
-                <div>
-                    <ul class="nav-menu">
-                        <li>
-                            <a href="logout.html">Cierre de Sesión</a>
-                        </li>
-                        <li>
-                            <a href="soporte.html">Soporte</a>
-                        </li>
-                    </ul>
-                </div>
+                    <hr>
+                </li>
+                <li class="nav-item">
+                    <a href="proyectos.html" class="nav-link" aria-current="page">
+                        <i class="fas fa-project-diagram"></i>Mis Proyectos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendario.html" class="nav-link" aria-current="page">
+                        <i class="fas fa-calendar-alt"></i></i>Calendario
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="equipo.html" class="nav-link" aria-current="page">
+                        <i class="fas fa-user-friends"></i>Contactos
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="img/avatar04.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Usuario</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Mensajes</a></li>
+                    <li><a class="dropdown-item" href="micuenta.html">Configuración</a></li>
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="login.html">Cerrar Sesión</a></li>
+                </ul>
             </div>
-        </nav>
-        <!--Fin de barra nav-->
+        </div>
+        <main>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <h3 class="text-center">Equipo</h3>
+
+                </div>
+            </nav>
     </header>
 
-    </body>
-    </html>
+</body>
+
+</html>

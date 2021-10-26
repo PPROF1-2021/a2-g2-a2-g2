@@ -1,0 +1,146 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+    transition: color 1 ease-in;
+}
+
+
+/*HEADING*/
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto', sans-serif;
+    margin: 15px auto;
+    font-weight: 900;
+}
+
+.text-center {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+    overflow-y: auto !important;
+}
+
+.logo {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.sidebar span.fs-4 {
+    text-decoration: underline;
+    transition: color 1 ease-in;
+}
+
+.sidebar span.fs-4:hover {
+    color: gray;
+    transition: color 1 ease-in;
+}
+
+ul.nav li a {
+    color: white;
+}
+
+ul.nav i.fas {
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+
+/*Barra superior*/
+
+nav.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 1px rgba(128, 128, 128, 0.357);
+    margin-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        display: none !important;
+    }
+}
+
+
+/*contenido*/
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.content {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 0;
+}
+
+.card-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.card-header h3 {
+    margin: 10px 0;
+}
+
+.card-body {
+    text-align: justify;
+}
+
+.tareas li {
+    font-size: 15px;
+}
+
+.tareas li i.fas {
+    font-size: 20px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.participantes img {
+    max-width: 42px;
+    margin: 0 15px 10px 0;
+}
