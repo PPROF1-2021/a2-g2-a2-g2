@@ -18,8 +18,8 @@
         <nav class="barra-navegador">
             <div class="contenedor">
                 <div class="logo">
-                    <a href="index.html"><img src="img/logo.jpg" alt="Logo ProjectAPP"></a>
-                    <a href="index.html">
+                    <a href="index.php"><img src="img/logo.jpg" alt="Logo ProjectAPP"></a>
+                    <a href="index.php">
                          ProjectAPP
                     </a>
                 </div>

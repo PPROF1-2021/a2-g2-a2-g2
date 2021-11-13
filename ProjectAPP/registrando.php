@@ -5,14 +5,18 @@
 <main>
     <section class="login contenedor">
 
-        <form method="post" action="" name="signup-form">
+        <form 
+            name="registrar-usuario"
+            id="registrar-usuario"
+            action="modelo/login-admin.php"
+            method="post">  
             <div class="form-element">
                 <label>Nombre y Apellido</label>
-                <input type="text" name="nombre y apellido" pattern="[a-zA-Z0-9]+" required placeholder="Nombre y Apellido" />
+                <input type="text" name="nombre-apellido" required placeholder="Nombre y Apellido" />
             </div>
             <div class="form-element">
                 <label>Fecha de Nacimiento</label>
-                <input type="date" id="fecha de nacimiento" name="trip-start" value="2018-07-22" min="1920-01-01">
+                <input type="date" id="fecha de nacimiento" name="fecha-nacimiento" min="1920-01-01">
             </div>
             <div class="form-element">
                 <label>Provincia </label>
@@ -32,7 +36,7 @@
             </div>
             <div class="form-element">
                 <label>Nombre de Usuario</label>
-                <input type="text" name="nombre de usuario" pattern="[a-zA-Z0-9]+" required placeholder="Nombre de Usuario" />
+                <input type="text" name="nombre-usuario" required placeholder="Nombre de Usuario" />
             </div>
             <div class="form-element">
                 <label>Email</label>
@@ -42,7 +46,9 @@
                 <label>Clave</label>
                 <input type="password" name="password" required placeholder="Ingresa clave de 8 digitos" />
             </div>
-            <a href="dashboard.html" class="btn">Continuar</a>
+            <input type="hidden" name="login-user" value="registrar-usuario">
+
+            <button type="submit" class="btn" style="width: 100%;">Continuar</button>
         </form>
         </form>
 

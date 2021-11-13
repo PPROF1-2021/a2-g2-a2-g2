@@ -1,7 +1,6 @@
 <?php 
     include_once 'templates/header.php';
 ?>
-
 <main>
 <div class="hero">
             <div class="contenedor">
