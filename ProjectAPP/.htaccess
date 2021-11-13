@@ -1,0 +1,9 @@
+# HTID:13436139: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:13436139:
+
+ErrorDocument 404 http://projectapp.local/404.php
+
+#TODO: cambiar dirección
+
+php_value max_execution_time 300
