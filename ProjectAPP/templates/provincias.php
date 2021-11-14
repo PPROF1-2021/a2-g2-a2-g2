@@ -1,3 +1,4 @@
+<option selected disabled value="">Elige una pronvincia...</option>
 <option value="Buenos Aires">Buenos Aires</option>
 <option value="CABA">Ciudad Autonoma de Buenos Aires</option>
 <option value="Catamarca">Catamarca</option>
@@ -20,5 +21,5 @@
 <option value="Santa Cruz">Santa Cruz</option>
 <option value="Santa Fe">Santa Fe</option>
 <option value="Santiago del Estero">Santiago del Estero</option>
-<option value=" Tierra del Fuego"> Tierra del Fuego</option>
+<option value="Tierra del Fuego"> Tierra del Fuego</option>
 <option value="Tucumán"> Tucumán</option>

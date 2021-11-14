@@ -30,8 +30,9 @@
         }
         if($_POST["login-user"] == "registrar-usuario"){
 
-            $nombre_usuario = $_POST["nombre-usuario"];
-            $email = $_POST["email"];
+            $nombre_usuario = strtolower($_POST["nombre-usuario"]);
+            $email = strtolower($_POST["correo"]);
+            
             $password = $_POST["password"];
 
             //hashear constraseña
@@ -65,6 +66,48 @@
                 $conex->close();
             } catch (Exception $e) {
                 $respuesta  = array(
+                    'respuesta' => 'error',
+                    'error' => "Error: " . $e->getMessage()
+                );
+            }
+            die(json_encode($respuesta));
+        }
+        if($_POST["login-user"] == "ingresar"){
+            $correo = strtolower($_POST["usuario"]);
+            $password = $_POST["password"];
+            try {
+                $stmt = $conex->prepare("SELECT idUsuario, nombre, email, contrasena FROM usuarios where email = ?");
+                $stmt->bind_param("s", $correo);
+
+                $stmt->execute();
+                $stmt->bind_result($idUsuario,$nombreUsuario,$correoUsuario,$passwordUsuario);
+
+                if($stmt->affected_rows){
+                    if($stmt->fetch()){
+                        if(password_verify($password,$passwordUsuario)){
+                            session_start();
+                            $_SESSION['id'] = $idUsuario;
+                            $_SESSION['usuario'] = $nombreUsuario;
+                            $_SESSION['tipo'] = 'usuario';
+                            $respuesta = array(
+                                'respuesta' => 'exito',
+                                'usuario' => $nombreUsuario
+                            );
+                        }else{
+                            $respuesta = array(
+                                'respuesta' => 'error'
+                            );
+                        }
+                    }else{
+                        $respuesta = array(
+                            'respuesta' => 'error'
+                        );
+                    }
+                }
+                $stmt->close();
+                $conex->close();
+            } catch (Exception $e) {
+                $respuesta = array(
                     'respuesta' => 'error',
                     'error' => "Error: " . $e->getMessage()
                 );

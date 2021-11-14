@@ -1,3 +1,19 @@
+<?php 
+    session_start();
+    if(isset($_GET['cerrar_sesion'])){
+         $cerrar_sesion = $_GET['cerrar_sesion'];
+         if($cerrar_sesion){
+              session_destroy();
+         }
+    } elseif(isset($_SESSION['nombre-usuario'])){
+         header('Location:index.php');
+    }
+    if(isset($_SESSION['usuario'])){
+        header('Location:../user/index.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +24,7 @@
     <title>ProjectAPP</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="favicon.ico">
