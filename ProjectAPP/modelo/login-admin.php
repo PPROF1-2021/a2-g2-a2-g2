@@ -78,39 +78,58 @@
             try {
                 $stmt = $conex->prepare("SELECT idUsuario, nombre, email, contrasena FROM usuarios where email = ?");
                 $stmt->bind_param("s", $correo);
-
                 $stmt->execute();
                 $stmt->bind_result($idUsuario,$nombreUsuario,$correoUsuario,$passwordUsuario);
-
                 if($stmt->affected_rows){
                     if($stmt->fetch()){
                         if(password_verify($password,$passwordUsuario)){
-                            session_start();
-                            $_SESSION['id'] = $idUsuario;
-                            $_SESSION['usuario'] = $nombreUsuario;
-                            $_SESSION['tipo'] = 'usuario';
-                            $respuesta = array(
-                                'respuesta' => 'exito',
-                                'usuario' => $nombreUsuario
-                            );
+                            $stmt->close();
+                            $stmt = $conex->prepare("INSERT INTO sesiones (idUsuario, inicio_sesion) VALUES(?,NOW())");
+                            $stmt->bind_param("i", $idUsuario);
+                            $stmt->execute();
+                            $idInsertado = $stmt->insert_id;
+                            if($idInsertado > 0){
+                                session_start();
+                                $_SESSION['id'] = $idInsertado;
+                                $_SESSION['usuario'] = $nombreUsuario;
+                                $_SESSION['tipo'] = 'usuario';
+                                $respuesta = array(
+                                    'respuesta' => 'exito',
+                                    'usuario' => $nombreUsuario
+                                );
+                            }else{
+
+                                $respuesta = array(
+                                    'respuesta' => 'error'
+                                );    
+                            }
+                            $stmt->close();
                         }else{
+                            
                             $respuesta = array(
                                 'respuesta' => 'error'
                             );
+                            $stmt->close();
+                            $conex->close();
                         }
                     }else{
                         $respuesta = array(
                             'respuesta' => 'error'
                         );
+                        $stmt->close();
+                        $conex->close();
                     }
+                }else{
+                    $stmt->close();
+                    $conex->close();
                 }
-                $stmt->close();
-                $conex->close();
             } catch (Exception $e) {
+                die('Error: ' . $e->getMessage());
                 $respuesta = array(
                     'respuesta' => 'error',
                     'error' => "Error: " . $e->getMessage()
                 );
+                $conex->close();
             }
             die(json_encode($respuesta));
         }
